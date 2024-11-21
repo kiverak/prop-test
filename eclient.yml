@@ -1,0 +1,12 @@
+server:
+  port: 0
+
+eureka:
+  instance:
+    hostname: localhost
+    instance-id: eclient:${random.uuid}
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka
+
+tmpVar: 100
