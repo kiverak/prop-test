@@ -35,9 +35,6 @@ spring:
             allowedHeaders: "*"
 
 management:
-  endpoint:
-    gateway:
-      enabled: true
   endpoints:
     web:
       exposure:
