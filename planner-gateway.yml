@@ -15,7 +15,7 @@ spring:
           enabled: true
           lower-case-service-id: true
       routes:
-        - id: eclient
+        - id: planner-todo
           uri: lb://planner-todo
           predicates:
             - Path=/**
