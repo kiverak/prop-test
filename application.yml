@@ -12,3 +12,7 @@ management:
     web:
       exposure:
         include: health, beans
+
+server:
+  error:
+    include-message: always
