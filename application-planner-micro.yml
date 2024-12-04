@@ -14,3 +14,5 @@ tmpVar: 100
 feign:
   circuitbreaker:
     enabled: true
+    alphanumeric-ids:
+      enabled: true
