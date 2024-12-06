@@ -4,8 +4,14 @@ spring:
     username: postgres
     password: root
   cloud:
+#    stream:
+#      bindings:
+#        todoOutputChannel:
+#          destination: planner-micro
+#          group: planner-group
+    function:
+      definition: newUserActionProduce
     stream:
       bindings:
-        todoOutputChannel:
-          destination: planner-micro
-          group: planner-group
+        newUserActionProduce-out-0:
+          destination: planner-dest

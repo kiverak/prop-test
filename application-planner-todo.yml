@@ -4,13 +4,19 @@ spring:
     username: postgres
     password: root
   cloud:
+#    stream:
+#      bindings:
+#        todoInputChannel:
+#          destination: planner-micro
+#          group: planner-group
+#      rabbit:
+#        bindings:
+#          todoInputChannel:
+#            consumer:
+#              auto-bind-dlq: true
+    function:
+      definition: newUserActionConsume
     stream:
       bindings:
-        todoInputChannel:
-          destination: planner-micro
-          group: planner-group
-      rabbit:
-        bindings:
-          todoInputChannel:
-            consumer:
-              auto-bind-dlq: true
+        newUserActionConsume-in-0.destination: planner-dest
+        newUserActionConsume-in-0.group: planner-group
