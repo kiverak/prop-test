@@ -3,3 +3,9 @@ spring:
     url: jdbc:postgresql://localhost:5432/planner_users
     username: postgres
     password: root
+  cloud:
+    stream:
+      bindings:
+        todoOutputChannel:
+          destination: planner-micro
+          group: planner-group

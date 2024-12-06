@@ -3,3 +3,14 @@ spring:
     url: jdbc:postgresql://localhost:5432/planner_todo
     username: postgres
     password: root
+  cloud:
+    stream:
+      bindings:
+        todoInputChannel:
+          destination: planner-micro
+          group: planner-group
+      rabbit:
+        bindings:
+          todoInputChannel:
+            consumer:
+              auto-bind-dlq: true
