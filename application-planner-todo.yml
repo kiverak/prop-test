@@ -20,9 +20,3 @@ spring:
       bindings:
         newUserActionConsume-in-0.destination: planner-dest
         newUserActionConsume-in-0.group: planner-group
-
-  security:
-    oauth2:
-      resourceserver:
-        jwt:
-          jwk-set-uri: http://localhost:8180/realms/todoapp-realm/protocol/openid-connect/certs

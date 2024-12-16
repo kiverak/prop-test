@@ -1,0 +1,16 @@
+keycloak:
+  auth-server-url: http://localhost:8180/
+  resource-user: user-manage-client
+  resource-realm: todoapp-realm
+  # ssl не потребуется для внутренних вызовов (локальная разработка)
+  ssl-required: external
+  credentials:
+    secret: 0AyDRSajJckLvUVQBeKBuqWfJEKQZutY
+  use-resource-role-mappings: true
+
+spring:
+  security:
+    oauth2:
+      resourceserver:
+        jwt:
+          jwk-set-uri: http://localhost:8180/realms/todoapp-realm/protocol/openid-connect/certs
