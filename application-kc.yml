@@ -1,5 +1,5 @@
 keycloak:
-  auth-server-url: http://localhost:8180/
+  auth-server-url: http://localhost:8443/
   resource: user-manage-client
   realm: todoapp-realm
   # ssl не потребуется для внутренних вызовов (локальная разработка)
